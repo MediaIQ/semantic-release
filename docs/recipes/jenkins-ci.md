@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sh'''
                 npm install
-                npm install
+                npm test
             '''}
         }
         stage('Release') {
