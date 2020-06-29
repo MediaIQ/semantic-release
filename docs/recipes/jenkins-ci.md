@@ -43,3 +43,15 @@ pipeline {
     }
 }
 ```
+
+### `package.json` configuration for multiple Node jobs
+
+A `package.json` is required only for [local](../usage/installation.md#local-installation) **semantic-release** installation.
+
+```json
+{
+  "devDependencies": {
+    "semantic-release": "^15.0.0"
+  }
+}
+```
