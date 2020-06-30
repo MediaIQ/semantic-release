@@ -26,25 +26,29 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh'''
+                sh '''
+                # Configure your test steps here (checkout, npm install, tests etc)
                 npm install
                 npm test
-            '''}
+                '''
+                }
         }
         stage('Release') {
             tools {
             nodejs "node 10.18"
             }
             steps {
-                sh'''
+                sh '''
+                # Run optional required steps before releasing
                 npx semantic-release
-            '''}            
+                '''
+            }            
         }
     }
 }
 ```
 
-### `package.json` configuration for multiple Node jobs
+### `package.json` configuration for a Node job
 
 A `package.json` is required only for [local](../usage/installation.md#local-installation) **semantic-release** installation.
 
