@@ -17,7 +17,7 @@ This example is a minimal configuration for **semantic-release** with a build ru
 **Note**: The`semantic-release` execution command varies depending if you are using a [local](../usage/installation.md#local-installation) or [global](../usage/installation.md#global-installation) **semantic-release** installation.
 
 ```yaml
-# The release stage in the pipeline will run only if the test stage in the pipeline is successful
+// The release stage in the pipeline will run only if the test stage in the pipeline is successful
 pipeline {
     agent any 
     environment {
